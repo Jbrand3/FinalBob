@@ -20,8 +20,8 @@ size = Vector2(56, 64)
 z_index = -1
 offset_left = 1.0
 offset_top = -2.0
-offset_right = 1166.0
-offset_bottom = 635.0
+offset_right = 1151.0
+offset_bottom = 656.0
 texture = ExtResource("1_5sfmx")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=355922354]

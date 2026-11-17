@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cugbu4w0rbbx5"]
+
+[ext_resource type="Texture2D" uid="uid://cpoj7waftitgk" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 12.png" id="1_c1gtx"]
+[ext_resource type="Texture2D" uid="uid://db6lof5u0xdf1" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 11.png" id="2_ry5bi"]
+[ext_resource type="Texture2D" uid="uid://b31q6udy7yrau" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 10.png" id="3_ph1ng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmsmm"]
+size = Vector2(194, 66)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1376987450]
+position = Vector2(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269757838]
+position = Vector2(87, 23)
+shape = SubResource("RectangleShape2D_rmsmm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=772265750]
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround12" type="Sprite2D" parent="." unique_id=1732060608]
+position = Vector2(152, 23.999998)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_c1gtx")
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="." unique_id=563999539]
+position = Vector2(88, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ry5bi")
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround10" type="Sprite2D" parent="." unique_id=1587696139]
+position = Vector2(24.000002, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ph1ng")
