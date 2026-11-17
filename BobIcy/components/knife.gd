@@ -1,21 +1,24 @@
 class_name Knife
 extends Area2D
-## A thrown knife. It flies straight until it leaves the screen or hits a wall.
 
 @export var speed: float = 520.0
-
 var direction: Vector2 = Vector2.RIGHT
+var lifetime: float = 2.0
 
 @onready var hitbox: HitboxComponent = $HitboxComponent
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	hitbox.landed.connect(queue_free)
+	rotation = direction.angle() + (PI / 4.0)
 
 func _physics_process(delta: float) -> void:
 	position += direction * speed * delta
-	if not get_viewport_rect().grow(40.0).has_point(global_position):
+	lifetime -= delta
+	if lifetime <= 0.0:
 		queue_free()
 
-func _on_body_entered(_body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Bob":
+		return
 	queue_free()

@@ -6,7 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_berry"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8tonq"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n2bu5"]
+radius = 24.0
+height = 113.13709
 
 [node name="Knife" type="Area2D" unique_id=1006539971]
 collision_layer = 0
@@ -25,4 +27,5 @@ script = ExtResource("3_kbu1f")
 metadata/_custom_type_script = "uid://s2jcr1411kwi"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=504291145]
-shape = SubResource("CircleShape2D_8tonq")
+rotation = 0.7853982
+shape = SubResource("CapsuleShape2D_n2bu5")

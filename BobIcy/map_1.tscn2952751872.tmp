@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dvm600yohx2b0"]
+
+[ext_resource type="Texture2D" uid="uid://db6lof5u0xdf1" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 11.png" id="1_thia8"]
+[ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob.tscn" id="2_lolil"]
+[ext_resource type="Texture2D" uid="uid://cknnrtajmsh02" path="res://background 3/orig.png" id="3_1q0j8"]
+[ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="4_n2bu5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs4na"]
+size = Vector2(1176, 120)
+
+[node name="Map1" type="Node2D" unique_id=2035590332]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=614566498]
+position = Vector2(48, 592)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=423776856]
+position = Vector2(516, 12)
+shape = SubResource("RectangleShape2D_cs4na")
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D" unique_id=1385170187]
+position = Vector2(520, 8)
+scale = Vector2(9.125, 1)
+texture = ExtResource("1_thia8")
+
+[node name="Bob" parent="." unique_id=612941245 instance=ExtResource("2_lolil")]
+position = Vector2(32, 424)
+
+[node name="TopConnector" type="Marker2D" parent="." unique_id=830774132]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1726109537]
+z_index = -1
+offset_left = -16.0
+offset_top = 12.0
+offset_right = 1156.0
+offset_bottom = 664.0
+texture = ExtResource("3_1q0j8")
+
+[node name="StaticBody2D2" parent="." unique_id=1376987450 instance=ExtResource("4_n2bu5")]
+position = Vector2(208, 337)
+
+[node name="StaticBody2D3" parent="." unique_id=1900907515 instance=ExtResource("4_n2bu5")]
+position = Vector2(646, 238)
