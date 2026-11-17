@@ -1,21 +1,7 @@
 [gd_scene format=3 uid="uid://cxy2x6qkwggo2"]
 
-[ext_resource type="Texture2D" uid="uid://b31q6udy7yrau" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 10.png" id="1_5wxai"]
-[ext_resource type="Texture2D" uid="uid://db6lof5u0xdf1" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 11.png" id="2_igs0g"]
-[ext_resource type="Texture2D" uid="uid://cpoj7waftitgk" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 12.png" id="3_frbht"]
+[ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="2_0nuxv"]
 [ext_resource type="Texture2D" uid="uid://dmt8odqkl2kr8" path="res://background 3/5.png" id="4_igs0g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8x4h"]
-size = Vector2(64, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8y0y"]
-size = Vector2(64, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecghn"]
-size = Vector2(56, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jknfv"]
-size = Vector2(26, 658)
 
 [node name="Map_2" type="Node2D" unique_id=1719398828]
 
@@ -29,173 +15,14 @@ offset_bottom = 648.0
 offset_transform_enabled = true
 texture = ExtResource("4_igs0g")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=619053327]
-position = Vector2(32, 440)
-metadata/_edit_group_ = true
+[node name="StaticBody2D" parent="." unique_id=1376987450 instance=ExtResource("2_0nuxv")]
+position = Vector2(96, 153)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=546721863]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_b8x4h")
+[node name="StaticBody2D2" parent="." unique_id=350732399 instance=ExtResource("2_0nuxv")]
+position = Vector2(889, 109)
 
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround10" type="Sprite2D" parent="StaticBody2D" unique_id=1844576162]
-position = Vector2(1.4305115e-06, 40.000023)
-scale = Vector2(0.49999997, 0.4999999)
-texture = ExtResource("1_5wxai")
+[node name="StaticBody2D3" parent="." unique_id=1896188314 instance=ExtResource("2_0nuxv")]
+position = Vector2(578, 276)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=68421312]
-position = Vector2(96, 464)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=14025582]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_s8y0y")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D2" unique_id=1004610263]
-position = Vector2(0, 15.999973)
-scale = Vector2(0.49999997, 0.5000003)
-texture = ExtResource("2_igs0g")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1105630191]
-position = Vector2(128, 448)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=868163649]
-position = Vector2(28, 32)
-shape = SubResource("RectangleShape2D_ecghn")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround12" type="Sprite2D" parent="StaticBody2D3" unique_id=1817355306]
-position = Vector2(32, 32)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_frbht")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1637491666]
-position = Vector2(608, 440)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=106835806]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_b8x4h")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround10" type="Sprite2D" parent="StaticBody2D4" unique_id=423899119]
-position = Vector2(1.4305115e-06, 40.000023)
-scale = Vector2(0.49999997, 0.4999999)
-texture = ExtResource("1_5wxai")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1945342560]
-position = Vector2(672, 464)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1757752133]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_s8y0y")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D5" unique_id=1249373390]
-position = Vector2(0, 15.999973)
-scale = Vector2(0.49999997, 0.5000003)
-texture = ExtResource("2_igs0g")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1739133889]
-position = Vector2(704, 448)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1254612588]
-position = Vector2(28, 32)
-shape = SubResource("RectangleShape2D_ecghn")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround12" type="Sprite2D" parent="StaticBody2D6" unique_id=1328320198]
-position = Vector2(32, 32)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_frbht")
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=431979947]
-position = Vector2(160, 184)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=192481774]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_b8x4h")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround10" type="Sprite2D" parent="StaticBody2D7" unique_id=806492449]
-position = Vector2(1.4305115e-06, 40.000023)
-scale = Vector2(0.49999997, 0.4999999)
-texture = ExtResource("1_5wxai")
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1012399170]
-position = Vector2(224, 208)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=203874469]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_s8y0y")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D8" unique_id=473846207]
-position = Vector2(0, 15.999973)
-scale = Vector2(0.49999997, 0.5000003)
-texture = ExtResource("2_igs0g")
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=950506282]
-position = Vector2(256, 192)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1106769659]
-position = Vector2(28, 32)
-shape = SubResource("RectangleShape2D_ecghn")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround12" type="Sprite2D" parent="StaticBody2D9" unique_id=166018539]
-position = Vector2(32, 32)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_frbht")
-
-[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=126952857]
-position = Vector2(992, 184)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=2114422853]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_b8x4h")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround10" type="Sprite2D" parent="StaticBody2D10" unique_id=1246069090]
-position = Vector2(1.4305115e-06, 40.000023)
-scale = Vector2(0.49999997, 0.4999999)
-texture = ExtResource("1_5wxai")
-
-[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=1462062899]
-position = Vector2(1056, 208)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=1374862402]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_s8y0y")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D11" unique_id=1446579349]
-position = Vector2(0, 15.999973)
-scale = Vector2(0.49999997, 0.5000003)
-texture = ExtResource("2_igs0g")
-
-[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=327164309]
-position = Vector2(1088, 192)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1136663093]
-position = Vector2(28, 32)
-shape = SubResource("RectangleShape2D_ecghn")
-
-[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround12" type="Sprite2D" parent="StaticBody2D12" unique_id=1888445388]
-position = Vector2(32, 32)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_frbht")
-
-[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=500087655]
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1648465429]
-position = Vector2(-8, 328)
-shape = SubResource("RectangleShape2D_jknfv")
-
-[node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=2100805859]
-position = Vector2(1176, 0)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1021569992]
-position = Vector2(-8, 328)
-shape = SubResource("RectangleShape2D_jknfv")
+[node name="StaticBody2D4" parent="." unique_id=1808324983 instance=ExtResource("2_0nuxv")]
+position = Vector2(102, 425)
