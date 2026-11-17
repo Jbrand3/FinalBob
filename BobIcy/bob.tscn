@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://cjc8ie1fegmrx" path="res://Jump Start/0_Reaper_Man_Jump Start_004.png" id="24_7pwto"]
 [ext_resource type="Texture2D" uid="uid://d0sw04hbpru7w" path="res://Jump Loop/0_Reaper_Man_Jump Loop_005.png" id="25_sknr1"]
 [ext_resource type="Texture2D" uid="uid://but4batvrb8g" path="res://Jump Start/0_Reaper_Man_Jump Start_005.png" id="31_ndywh"]
+[ext_resource type="Script" uid="uid://dgvy6vschpl47" path="res://components/health_component.gd" id="32_n3kq6"]
+[ext_resource type="Script" uid="uid://iykntdwx67tf" path="res://components/hurtbox_component.gd" id="33_rhwdg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jknfv"]
 animations = [{
@@ -144,6 +146,10 @@ animations = [{
 radius = 48.0
 height = 96.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jknfv"]
+radius = 48.0
+height = 96.0
+
 [node name="Bob" type="CharacterBody2D" unique_id=612941245]
 script = ExtResource("1_nw4tb")
 
@@ -162,3 +168,17 @@ shape = SubResource("CapsuleShape2D_cs4na")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=726193688]
 limit_left = 0
 limit_right = 1152
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1404708314]
+script = ExtResource("32_n3kq6")
+metadata/_custom_type_script = "uid://dgvy6vschpl47"
+
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=75367053 node_paths=PackedStringArray("health")]
+collision_mask = 16
+script = ExtResource("33_rhwdg")
+health = NodePath("../HealthComponent")
+metadata/_custom_type_script = "uid://iykntdwx67tf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1571369124]
+position = Vector2(48, 48)
+shape = SubResource("CapsuleShape2D_jknfv")
