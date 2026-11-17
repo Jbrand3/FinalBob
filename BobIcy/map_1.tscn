@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dvm600yohx2b0"]
+
+[ext_resource type="Texture2D" uid="uid://db6lof5u0xdf1" path="res://PNG/Platformer/Cartoon_Medieval_Training Arena_Level_Set_Platformer - Ground 11.png" id="1_thia8"]
+[ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob.tscn" id="2_lolil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs4na"]
+size = Vector2(1176, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8y0y"]
+size = Vector2(344, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8x4h"]
+size = Vector2(488, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jknfv"]
+size = Vector2(18, 690)
+
+[node name="Map1" type="Node2D" unique_id=2035590332]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=614566498]
+position = Vector2(48, 592)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=423776856]
+position = Vector2(516, 12)
+shape = SubResource("RectangleShape2D_cs4na")
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D" unique_id=1385170187]
+position = Vector2(520, 8)
+scale = Vector2(9.125, 1)
+texture = ExtResource("1_thia8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1813716937]
+position = Vector2(64, 352)
+metadata/_edit_group_ = true
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D2" unique_id=482719097]
+position = Vector2(108, -20)
+scale = Vector2(2.6875, 0.5625)
+texture = ExtResource("1_thia8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=131183322]
+position = Vector2(108, -20)
+shape = SubResource("RectangleShape2D_s8y0y")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=921822486]
+position = Vector2(616, 112)
+
+[node name="CartoonMedievalTrainingArenaLevelSetPlatformerGround11" type="Sprite2D" parent="StaticBody2D3" unique_id=889436316]
+position = Vector2(308, -16)
+scale = Vector2(3.6875, 0.625)
+texture = ExtResource("1_thia8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=745572864]
+position = Vector2(312, -16)
+shape = SubResource("RectangleShape2D_b8x4h")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1561070493]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1887032248]
+position = Vector2(-8, 336)
+shape = SubResource("RectangleShape2D_jknfv")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1591428312]
+position = Vector2(1160, -8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=817777389]
+position = Vector2(-1, 335)
+shape = SubResource("RectangleShape2D_jknfv")
+
+[node name="Bob" parent="." unique_id=612941245 instance=ExtResource("2_lolil")]
+position = Vector2(32, 424)
