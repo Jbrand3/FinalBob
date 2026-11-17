@@ -14,6 +14,9 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c74ph"]
 size = Vector2(56, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0edqn"]
+size = Vector2(26, 658)
+
 [node name="Map_3" type="Node2D" unique_id=119447440]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1928684632]
@@ -138,3 +141,18 @@ shape = SubResource("RectangleShape2D_c74ph")
 position = Vector2(32, 32)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_o5g0d")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=1377012431]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=491427935]
+position = Vector2(-8, 328)
+shape = SubResource("RectangleShape2D_0edqn")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=2056779636]
+position = Vector2(1160, -8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=146857575]
+position = Vector2(-8, 328)
+shape = SubResource("RectangleShape2D_0edqn")

@@ -14,16 +14,18 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecghn"]
 size = Vector2(56, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jknfv"]
+size = Vector2(26, 658)
+
 [node name="Map_2" type="Node2D" unique_id=1719398828]
 
 [node name="TopConnector" type="Marker2D" parent="." unique_id=1915064594]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=622648659]
 z_index = -1
-offset_left = -8.0
-offset_top = -48.0
-offset_right = 1264.0
-offset_bottom = 664.0
+offset_left = 8.0
+offset_right = 1152.0
+offset_bottom = 648.0
 offset_transform_enabled = true
 texture = ExtResource("4_igs0g")
 
@@ -182,3 +184,18 @@ shape = SubResource("RectangleShape2D_ecghn")
 position = Vector2(32, 32)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_frbht")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=500087655]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=1648465429]
+position = Vector2(-8, 328)
+shape = SubResource("RectangleShape2D_jknfv")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=2100805859]
+position = Vector2(1176, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1021569992]
+position = Vector2(-8, 328)
+shape = SubResource("RectangleShape2D_jknfv")
