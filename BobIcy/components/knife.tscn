@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dpognaxf7pcxs"]
+
+[ext_resource type="Script" uid="uid://b7k2n4mq8wxp1" path="res://components/knife.gd" id="1_knife"]
+[ext_resource type="Texture2D" uid="uid://dy8ogfqkoyiek" path="res://PNG/Building/Cartoon_Medieval_Training Arena_Level_Set_Building - Decor Weapon 03.png" id="2_8qd6y"]
+[ext_resource type="Script" uid="uid://s2jcr1411kwi" path="res://components/hitbox_component.gd" id="3_kbu1f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_berry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tonq"]
+
+[node name="Knife" type="Area2D" unique_id=1006539971]
+collision_layer = 0
+script = ExtResource("1_knife")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=623073303]
+texture = ExtResource("2_8qd6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117489004]
+shape = SubResource("CircleShape2D_berry")
+
+[node name="HitboxComponent" type="Area2D" parent="." unique_id=523934498]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("3_kbu1f")
+metadata/_custom_type_script = "uid://s2jcr1411kwi"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=504291145]
+shape = SubResource("CircleShape2D_8tonq")
