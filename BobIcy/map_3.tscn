@@ -14,8 +14,11 @@ texture = ExtResource("1_3ioft")
 [node name="StaticBody2D" parent="." unique_id=1376987450 instance=ExtResource("2_fm2dq")]
 position = Vector2(639, 276)
 
+[node name="StaticBody2D4" parent="." unique_id=1620693348 instance=ExtResource("2_fm2dq")]
+position = Vector2(251, 78)
+
 [node name="StaticBody2D2" parent="." unique_id=2014801919 instance=ExtResource("2_fm2dq")]
 position = Vector2(959, 478)
 
 [node name="StaticBody2D3" parent="." unique_id=255588417 instance=ExtResource("2_fm2dq")]
-position = Vector2(-8, 461)
+position = Vector2(12, 463)
