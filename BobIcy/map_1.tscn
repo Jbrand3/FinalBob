@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://ctb8n71p3vtsn" path="res://bob.tscn" id="2_lolil"]
 [ext_resource type="Texture2D" uid="uid://cknnrtajmsh02" path="res://background 3/orig.png" id="3_1q0j8"]
 [ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="4_n2bu5"]
+[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="5_fpksy"]
+[ext_resource type="PackedScene" uid="uid://dwod1c8k5hdse" path="res://coin.tscn" id="6_bhpv2"]
+[ext_resource type="PackedScene" uid="uid://o2feuimly0k8" path="res://health_pickup.tscn" id="7_avvnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cs4na"]
 size = Vector2(1176, 120)
@@ -41,3 +44,13 @@ position = Vector2(208, 337)
 
 [node name="StaticBody2D3" parent="." unique_id=1900907515 instance=ExtResource("4_n2bu5")]
 position = Vector2(646, 238)
+
+[node name="Enemy" parent="." unique_id=1002592887 instance=ExtResource("5_fpksy")]
+position = Vector2(240, 232)
+
+[node name="Coins" parent="." unique_id=707856475 instance=ExtResource("6_bhpv2")]
+z_index = 1
+position = Vector2(744, 480)
+
+[node name="health_pickup" parent="." unique_id=931283782 instance=ExtResource("7_avvnj")]
+position = Vector2(240, 504)

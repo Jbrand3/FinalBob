@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwod1c8k5hdse"]
+
+[ext_resource type="Script" uid="uid://bh3r7aanymm3m" path="res://coins.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://cc4tmwm7yydhg" path="res://PNG/Environment/Cartoon_Medieval_Training Arena_Level_Set_Environment - Bag.png" id="2_v7riw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs4na"]
+radius = 48.0
+height = 96.0
+
+[node name="Coins" type="Area2D" unique_id=707856475]
+script = ExtResource("1_0t63x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=374149829]
+texture = ExtResource("2_v7riw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1477950701]
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_cs4na")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://o2feuimly0k8"]
+
+[ext_resource type="Script" uid="uid://bgft8sywy76xm" path="res://health_pickup.gd" id="1_awyve"]
+[ext_resource type="Texture2D" uid="uid://dpfq7oqmf2706" path="res://PNG/Head.png" id="2_xl6eh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs4na"]
+radius = 32.0
+height = 64.0
+
+[node name="health_pickup" type="Area2D" unique_id=707856475]
+collision_layer = 255
+collision_mask = 17
+script = ExtResource("1_awyve")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=374149829]
+position = Vector2(16, -11.999997)
+scale = Vector2(0.17916663, 0.116666675)
+texture = ExtResource("2_xl6eh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1477950701]
+position = Vector2(8, 0)
+shape = SubResource("CapsuleShape2D_cs4na")

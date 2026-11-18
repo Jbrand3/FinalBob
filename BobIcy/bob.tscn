@@ -150,7 +150,7 @@ height = 96.0
 radius = 48.0
 height = 96.0
 
-[node name="Bob" type="CharacterBody2D" unique_id=612941245]
+[node name="Bob" type="CharacterBody2D" unique_id=612941245 groups=["player"]]
 script = ExtResource("1_nw4tb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=616694441]
@@ -173,10 +173,10 @@ limit_right = 1152
 script = ExtResource("32_n3kq6")
 metadata/_custom_type_script = "uid://dgvy6vschpl47"
 
-[node name="HurtboxComponent" type="Area2D" parent="." unique_id=75367053 node_paths=PackedStringArray("health")]
-collision_mask = 16
+[node name="HurtboxComponent" type="Area2D" parent="." unique_id=75367053]
+collision_layer = 16
+collision_mask = 32
 script = ExtResource("33_rhwdg")
-health = NodePath("../HealthComponent")
 metadata/_custom_type_script = "uid://iykntdwx67tf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1571369124]

@@ -20,7 +20,7 @@ position = Vector2(87, 421)
 position = Vector2(807, 409)
 
 [node name="StaticBody2D3" parent="." unique_id=2122895474 instance=ExtResource("2_v5vfm")]
-position = Vector2(341, 277)
+position = Vector2(328, 200)
 
 [node name="StaticBody2D4" parent="." unique_id=2116913642 instance=ExtResource("2_v5vfm")]
-position = Vector2(875, 186)
+position = Vector2(968, 136)
