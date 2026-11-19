@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7wjyqc7wsvnn" path="res://background 3/3.png" id="1_3ioft"]
 [ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="2_fm2dq"]
+[ext_resource type="PackedScene" uid="uid://dlwfsuau0217c" path="res://walls.tscn" id="3_ae20f"]
 
 [node name="Map_3" type="Node2D" unique_id=119447440]
 
@@ -22,3 +23,9 @@ position = Vector2(959, 478)
 
 [node name="StaticBody2D3" parent="." unique_id=255588417 instance=ExtResource("2_fm2dq")]
 position = Vector2(12, 463)
+
+[node name="Walls" parent="." unique_id=303640488 instance=ExtResource("3_ae20f")]
+position = Vector2(3, -20)
+
+[node name="Walls2" parent="." unique_id=521355441 instance=ExtResource("3_ae20f")]
+position = Vector2(1157, -17)

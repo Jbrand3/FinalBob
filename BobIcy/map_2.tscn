@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="2_0nuxv"]
 [ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="3_5wxai"]
+[ext_resource type="PackedScene" uid="uid://dlwfsuau0217c" path="res://walls.tscn" id="4_frbht"]
 [ext_resource type="Texture2D" uid="uid://dmt8odqkl2kr8" path="res://background 3/5.png" id="4_igs0g"]
 
 [node name="Map_2" type="Node2D" unique_id=1719398828]
@@ -33,3 +34,8 @@ position = Vector2(616, 184)
 
 [node name="Enemy2" parent="." unique_id=1108856226 instance=ExtResource("3_5wxai")]
 position = Vector2(120, 320)
+
+[node name="Walls" parent="." unique_id=303640488 instance=ExtResource("4_frbht")]
+
+[node name="Walls2" parent="." unique_id=245113905 instance=ExtResource("4_frbht")]
+position = Vector2(1149, -21)
