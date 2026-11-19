@@ -25,8 +25,16 @@ func _ready() -> void:
 		var health := get_node_or_null("HealthComponent")
 		if health:
 			hurtbox.health = health
+			
+	if has_node("HealthComponent"):
+		var hc = $HealthComponent
+		if has_node("HurtboxComponent"):
+			$HurtboxComponent.health = hc
+		if hc.has_signal("died"):
+			hc.died.connect(die)
 
-
+func die() -> void:
+	get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
