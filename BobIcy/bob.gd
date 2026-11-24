@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed: float = 300.0
 @export var jump_velocity: float = -1900.0
 
+
 @export_group("Combat & Stats Dials")
 @export var coins: int = 0
 @export var speed_multiplier: float = 1.0
@@ -34,7 +35,9 @@ func _ready() -> void:
 			hc.died.connect(die)
 
 func die() -> void:
-	get_tree().reload_current_scene()
+	get_tree().paused = true
+	var menu= preload("res://death_screen.tscn").instantiate()
+	add_child(menu)
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)

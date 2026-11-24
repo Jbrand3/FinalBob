@@ -171,7 +171,7 @@ limit_right = 1152
 
 [node name="HealthComponent" type="Node" parent="." unique_id=1404708314]
 script = ExtResource("32_n3kq6")
-max_health = 6
+max_health = 1
 metadata/_custom_type_script = "uid://dgvy6vschpl47"
 
 [node name="HurtboxComponent" type="Area2D" parent="." unique_id=75367053]

@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dy8ogfqkoyiek" path="res://PNG/Building/Cartoon_Medieval_Training Arena_Level_Set_Building - Decor Weapon 03.png" id="2_8qd6y"]
 [ext_resource type="Script" uid="uid://s2jcr1411kwi" path="res://components/hitbox_component.gd" id="3_kbu1f"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5r4l"]
-height = 92.13736
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1gtx"]
+size = Vector2(26.55706, 53.429604)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n2bu5"]
-radius = 11.270657
-height = 126.93539
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry5bi"]
+size = Vector2(24.81062, 53.509113)
 
 [node name="Knife" type="Area2D" unique_id=1006539971]
-collision_layer = 0
+collision_layer = 129
+collision_mask = 32769
 script = ExtResource("1_knife")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=623073303]
@@ -21,17 +21,15 @@ scale = Vector2(0.5625, 0.375)
 texture = ExtResource("2_8qd6y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117489004]
-position = Vector2(16, -15.999998)
+position = Vector2(16, -14)
 rotation = 0.87266463
-shape = SubResource("CapsuleShape2D_h5r4l")
+shape = SubResource("RectangleShape2D_c1gtx")
 
 [node name="HitboxComponent" type="Area2D" parent="." unique_id=523934498]
-collision_layer = 0
-collision_mask = 0
 script = ExtResource("3_kbu1f")
 metadata/_custom_type_script = "uid://s2jcr1411kwi"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=504291145]
-position = Vector2(16, -16)
+position = Vector2(16.53084, -13.30552)
 rotation = 0.87266463
-shape = SubResource("CapsuleShape2D_n2bu5")
+shape = SubResource("RectangleShape2D_ry5bi")

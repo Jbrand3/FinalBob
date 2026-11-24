@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c30hctbunqic1"]
+
+[ext_resource type="Script" uid="uid://db6fnc1qagjt6" path="res://Death_Screen.gd" id="1_if853"]
+
+[node name="Death_Screen" type="CanvasLayer" unique_id=65405681]
+script = ExtResource("1_if853")
+
+[node name="Control" type="Control" parent="." unique_id=123757288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1336047411]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -46.5
+offset_right = 48.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=1182124997]
+layout_mode = 2
+text = "YOU DIED"
+
+[node name="RetryButton" type="Button" parent="Control/VBoxContainer" unique_id=957314448]
+layout_mode = 2
+mouse_filter = 1
+text = "Retry"
+
+[node name="MainMenuButton" type="Button" parent="Control/VBoxContainer" unique_id=1901654449]
+layout_mode = 2
+mouse_filter = 1
+text = "Main Menu"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1470071692]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0.36078432)
